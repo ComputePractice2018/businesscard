@@ -43,7 +43,7 @@ Location: /api/businesscard/vcards/1
     [
     }]
 
-### GET /api/businesscard/vcards?name=name1
+### GET /api/businesscard/vcards?name=ФИО
 
 Ответ: 200 OK
 ```json
