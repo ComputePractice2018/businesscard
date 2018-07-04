@@ -46,14 +46,14 @@ Location: /api/businesscard/vcards/1
 
 Ответ: 200 OK
  ```json
-    {
+    [{
         "name": "ФИО",
         "position": "Должность",
         "phone": "+7-999-999-99-99",
         "email": "user@domain.ru",
         "workplace": "Место работы",
         "address": "Адрес"
-    }
+    }]
 ```
 
 ### PUT /api/businesscard/vcards/1
