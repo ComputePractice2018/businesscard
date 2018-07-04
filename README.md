@@ -1,6 +1,5 @@
 # businesscard
 
-##Usecases
+# Usecases
 
-
-##API 
+## API 
