@@ -10,7 +10,7 @@
 
 ## REST API 
 
-## GET /api/businesscard/vcards 
+### GET /api/businesscard/vcards 
 
 Ответ: 200 OK
 ```json
@@ -24,7 +24,7 @@
     }]
 ```
 
-## POST /api/businesscard/vcards 
+### POST /api/businesscard/vcards 
 
 Тело запроса: 
 ```json
@@ -43,7 +43,21 @@ Location: /api/businesscard/vcards/1
     [
     }]
 
-## PUT /api/businesscard/vcards 
+### GET /api/businesscard/vcards?name=name1
+
+Ответ: 200 OK
+```json
+    [{
+        "name": "ФИО", 
+        "position": "Должность", 
+        "phone": "+7-999-999-99-99", 
+        "email": "user@domain.ru", 
+        "workplace": "Место работы", 
+        "address": "Адрес" 
+    }]
+```
+
+### PUT /api/businesscard/vcards 
 
 Тело запроса: 
 ```json
@@ -62,7 +76,7 @@ Location: /api/businesscard/vcards/1
     [
     }]
 
-## DELETE /api/businesscard/vcards 
+### DELETE /api/businesscard/vcards 
 
 Ответ: 204 Not Content
 Location: /api/businesscard/vcards/1
