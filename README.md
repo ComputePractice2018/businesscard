@@ -2,7 +2,6 @@
 
 # Usecases
 
-
 1. Как пользователь, я хочу иметь возможность просмотреть все имеющиеся визитки, чтобы использовать информацию, содержащуюся в них.
 1. Как пользователь, я хочу иметь возможность добавить визитку (ФИО, Должность, Телефон, E-mail, Место работы, Адрес), чтобы пополнять список имеющихся визиток.
 1. Как пользователь, я хочу иметь возможность найти нужную визитку по ФИО, чтобы быстро получить необходимую информацию.
@@ -15,14 +14,14 @@
 
 Ответ: 200 OK
 ```json
-[{
-    "name": "ФИО",
-    "position": "Должность",
-    "phone": "+7-999-999-99-99",
-    "email": "user@domain.ru",
-    "workplace": "Место работы",
-    "address": "Адрес"
-}]
+    [{
+        "name": "ФИО",
+        "position": "Должность",
+        "phone": "+7-999-999-99-99",
+        "email": "user@domain.ru",
+        "workplace": "Место работы",
+        "address": "Адрес"
+    }]
 ```
 
 ### POST /api/businesscard/vcards
@@ -44,8 +43,6 @@
 Location: /api/businesscard/vcards/1
 
 ### GET /api/businesscard/vcards?name=ФИО
-
-Тело запроса:
 
 Ответ: 200 OK
 ```json
@@ -77,7 +74,7 @@ Location: /api/businesscard/vcards/1
 Ответ: 202 Accepted
 Location: /api/businesscard/vcards/1
 
-### DELETE /api/businesscard/vcards/
+### DELETE /api/businesscard/vcards/1
 
 Ответ: 204 No Content
 
