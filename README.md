@@ -13,7 +13,7 @@
 ### GET /api/businesscard/vcards
 
 Ответ: 200 OK
-```json
+ ```json
     [{
         "name": "ФИО",
         "position": "Должность",
@@ -45,7 +45,7 @@ Location: /api/businesscard/vcards/1
 ### GET /api/businesscard/vcards?name=ФИО
 
 Ответ: 200 OK
-```json
+ ```json
     [{
         "name": "ФИО",
         "position": "Должность",
