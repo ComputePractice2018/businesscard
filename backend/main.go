@@ -11,7 +11,7 @@ func main() {
 	//var name = flag.String("name", "Ilay", "имя для приветствия")
 	//flag.Parse()
 
-	http.HandleFunc("/api/businesscard/vcards", server.GetVcards)
+	http.HandleFunc("/api/businesscard/vcards", server.VcardsHandler)
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
