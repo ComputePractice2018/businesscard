@@ -13,7 +13,7 @@
 
 ### GET /api/businesscard/vcards
 
-Ответ 200 OK
+Ответ: 200 OK
 ```json
 [{
     "name": "ФИО",
@@ -40,14 +40,14 @@
     }
 ```
 
-Ответ 201 Created
+Ответ: 201 Created
 Location: /api/businesscard/vcards/1
 
 ### GET /api/businesscard/vcards?name=ФИО
 
 Тело запроса:
 
-Ответ 200 OK
+Ответ: 200 OK
 ```json
     [{
         "name": "ФИО",
@@ -59,7 +59,7 @@ Location: /api/businesscard/vcards/1
     }]
 ```
 
-### PUT /api/businesscard/vcards/
+### PUT /api/businesscard/vcards/1
 
 Тело запроса:
 
@@ -74,12 +74,12 @@ Location: /api/businesscard/vcards/1
     }
 ```
 
-Ответ 202 Accepted
+Ответ: 202 Accepted
 Location: /api/businesscard/vcards/1
 
 ### DELETE /api/businesscard/vcards/
 
-Ответ 204 No Content
+Ответ: 204 No Content
 
 ## Как собрать и запустить
 
