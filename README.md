@@ -77,3 +77,13 @@ Location: /api/businesscard/vcards/1
 ### DELETE /api/businesscard/vcards/1
 
 Ответ: 204 No Content
+
+## Как собрать и запустить
+
+Backend:
+
+```bat
+cd backend
+docker build -f Dockerfile -t businesscard:<имя ветки> .
+docker run --rm --name businesscard -e NAME=<параметр приложения> businesscard:<имя ветки>
+```
