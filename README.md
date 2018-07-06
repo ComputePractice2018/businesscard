@@ -84,6 +84,14 @@ Backend:
 
 ```bat
 cd backend
-docker build -f Dockerfile -t businesscard:<имя ветки> .
-docker run --rm --name businesscard -e NAME=<параметр приложения> businesscard:<имя ветки>
+docker build -f Dockerfile -t businesscardbackend:<имя ветки> .
+docker run --rm --name businesscardbackend -e NAME=<параметр приложения> businesscardbackend:<имя ветки>
+```
+
+Frontend:
+
+```bat
+cd backend
+docker build -f Dockerfile -t businesscardfrontend:<имя ветки> .
+docker run  -d --rm --name businesscardfrontend -p 80:80 businesscardfrontend:<имя ветки>
 ```
