@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <businesscard msg="Визитки"/>
+    <businesscard title="Визитки"/>
   </div>
 </template>
 
