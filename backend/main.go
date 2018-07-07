@@ -1,6 +1,7 @@
 package main
 
 import (
+
 	"log"
 	"net/http"
 
@@ -19,3 +20,8 @@ func main() {
 	router.HandleFunc("/api/businesscard/vcards/{id}", serverDeleteVcard).Methods("DELETE")
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
+
+	http.HandleFunc("/api/businesscard/vcards", server.VcardsHandler)
+
+	log.Fatal(http.ListenAndServe(":8080", nil))
+
