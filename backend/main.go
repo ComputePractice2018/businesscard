@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	//var name = flag.String("name", "Ilay", "имя для приветствия")
+	//name := flag.String("name", "Ilay", "имя для приветствия")
 	//flag.Parse()
 
 	router := mux.NewRouter()

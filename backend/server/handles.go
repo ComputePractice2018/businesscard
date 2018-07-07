@@ -24,8 +24,8 @@ func GetVcards(w http.ResponseWriter, r *http.Request) {
 
 //AddVcard обрабатывает POST запрос
 func AddVcard(w http.ResponseWriter, r *http.Request) {
-	var Vcard data.Vcard
-	err := json.NewDecoder(r.Body).Decode(&Vcard)
+	var vcard data.Vcard
+	err := json.NewDecoder(r.Body).Decode(&vcard)
 	if err != nil {
 		message := fmt.Sprintf("Unable to decode POST data: %v", err)
 		http.Error(w, message, http.StatusUnsupportedMediaType)
