@@ -1,5 +1,9 @@
 package data
 
+import (
+	"fmt"
+)
+
 //Vcard структура для хранения визитных карточек
 type Vcard struct {
 	Name      string `json:"name"`
@@ -10,11 +14,35 @@ type Vcard struct {
 	Address   string `json:"address"`
 }
 
-//VcardList хранит список визитных карточек
-var VcardList = []Vcard{Vcard{
-	Name:      "ФИО",
-	Position:  "Должность",
-	Phone:     "+7-999-999-99-99",
-	Email:     "user@domain.ru",
-	Workplace: "Место работы",
-	Address:   "Адрес"}}
+// vcards хранит список визитных карточек
+var vcards []Vcard
+
+//GetVcards возвращает список визитных карточек
+func GetVcards() []Vcard {
+	return vcards
+}
+
+//AddVcard добавляет карточку vcard в конец списка и возвращает id
+func AddVcard(vcard Vcard) int {
+	id := len(vcards)
+	vcard = append(vcards, vcard)
+	return id
+}
+
+//EditVcard изменяет карточку c id на vcard
+func EditVcard(vcard Vcard, id int) error {
+	if id < 0 || id >= len(vcards) {
+		return fmt.Errorf("incorrect ID")
+	}
+	vcards[id] = vcard
+	return nil
+}
+
+//RemoveVcard удаляет контакт по id
+func RemoveVcard(id int) error {
+	if id < 0 || id >= len(vcards) {
+		return fmt.Errorf("incorrect ID")
+	}
+	vcards = append(vcards[:id], vcards[id+1:]...)
+	return nil
+}
