@@ -61,22 +61,20 @@ Location: /api/businesscard/vcards/1
 Тело запроса:
 
 ```json
-    [{
+    {
         "name": "ФИО",
         "position": "Должность",
         "phone": "+7-999-999-99-99",
         "email": "user@domain.ru",
         "workplace": "Место работы",
         "address": "Адрес"
-    }]
+    }
 ```
 
 Ответ: 202 Accepted
 Location: /api/businesscard/vcards/1
 
 ### DELETE /api/businesscard/vcards/1
-
-Ответ: 204 No Content
 
 ## Как собрать и запустить
 
