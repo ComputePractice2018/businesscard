@@ -95,3 +95,4 @@ cd backend
 docker build -f Dockerfile -t businesscardfrontend:<имя ветки> .
 docker run  -d --rm --name businesscardfrontend -p 80:80 businesscardfrontend:<имя ветки>
 ```
+
