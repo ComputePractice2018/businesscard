@@ -25,7 +25,7 @@ func GetVcards() []Vcard {
 //AddVcard добавляет карточку vcard в конец списка и возвращает id
 func AddVcard(vcard Vcard) int {
 	id := len(vcards)
-	vcard = append(vcards, vcard)
+	vcards = append(vcards, vcard)
 	return id
 }
 
