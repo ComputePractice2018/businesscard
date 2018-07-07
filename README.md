@@ -76,6 +76,9 @@
 
 Ответ: 201 Created
 Location: /api/businesscard/vcards/1
+    [
+    }]
+=======
 
     [
     }]
@@ -108,7 +111,7 @@ Location: /api/businesscard/vcards/1
         "workplace": "Место работы", 
         "address": "Адрес" 
     }
-    
+
  ```json
     [{
         "name": "ФИО",
@@ -138,6 +141,17 @@ Location: /api/businesscard/vcards/1
 
 Ответ: 202 Accepted
 Location: /api/businesscard/vcards/1
+    [
+    }]
+
+### DELETE /api/businesscard/vcards 
+
+Ответ: 204 Not Content
+Location: /api/businesscard/vcards/1
+    [
+    }]
+
+=======
 
     [
     }]
