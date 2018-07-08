@@ -6,6 +6,8 @@ import (
 	"log"
 	"net/http"
 	"github.com/gorilla/mux"
+	"strconv"
+
 	"github.com/ComputePractice2018/businesscard/backend/data"
 )
 
@@ -39,8 +41,8 @@ func AddVcard(w http.ResponseWriter, r *http.Request) {
 }
 //EditVcard обрабатывает PUT запрос 
 func EditVcard(w http.ResponseWriter, r *http.Request) {
-	var Vcard data.Vcard
-	err := json.NewDecoder(r.Body).Decode(&Vcard)
+	var vcard data.Vcard
+	err := json.NewDecoder(r.Body).Decode(&vcard)
 	if err != nil {
 		message := fmt.Sprintf("Unable to decode PUT data: %v", err)
 		http.Error(w, message, http.StatusUnsupportedMediaType)
