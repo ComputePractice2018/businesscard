@@ -48,7 +48,7 @@ func EditVcard(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var := mux.Vars(r)
+	vars := mux.Vars(r)
 	id, err := strconv.Atoi(vars["id"])
 	if err != nil {
 		message := fmt.Sprintf("Incorrect ID: %v", err)
@@ -71,7 +71,7 @@ func EditVcard(w http.ResponseWriter, r *http.Request) {
 
 //DeleteVcard обрабатывает  DELETE запрос
 func DeleteVcard(w http.ResponseWriter, r *http.Request) {
-	var := mux.Vars(r)
+	vars := mux.Vars(r)
 	id, err := strconv.Atoi(vars["id"])
 	if err != nil {
 		message := fmt.Sprintf("Incorrect ID: %v", err)
