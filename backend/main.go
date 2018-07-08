@@ -15,3 +15,4 @@ func main() {
 	http.HandleFunc("/api/businesscard/vcards", server.VcardsHandler)
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
+}
