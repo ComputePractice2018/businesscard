@@ -87,7 +87,7 @@ export default {
       })
     },
     remove_vcard: function (item) {
-      const url = '/api/businesscard/vcards' + this.vcard_list.indexOf(item)
+      const url = '/api/businesscard/vcards/' + this.vcard_list.indexOf(item)
       axios.delete(url).then(response => {
         this.vcard_list.splice(this.vcard_list.indexOf(item), 1)
       }).catch(response => {
@@ -99,7 +99,7 @@ export default {
       this.new_vcard = this.vcard_list[this.edit_index]
     },
     end_of_edition: function () {
-      const url = '/api/businesscard/vcards' + this.edit_index
+      const url = '/api/businesscard/vcards/' + this.edit_index
       axios.put(url, this.new_vcard).then(response => {
         this.edit_index = -1
         this.new_vcard = {

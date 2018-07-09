@@ -15,13 +15,13 @@ func main() {
 
 	router := mux.NewRouter()
 	router.HandleFunc("/api/businesscard/vcards", server.GetVcards).Methods("GET")
-	router.HandleFunc("/api/businesscard/vcards", serverAddVcard).Methods("POST")
-	router.HandleFunc("/api/businesscard/vcards/{id}", serverEditVcard).Methods("PUT")
-	router.HandleFunc("/api/businesscard/vcards/{id}", serverDeleteVcard).Methods("DELETE")
+	router.HandleFunc("/api/businesscard/vcards", server.AddVcard).Methods("POST")
+	router.HandleFunc("/api/businesscard/vcards/{id}", server.EditVcard).Methods("PUT")
+	router.HandleFunc("/api/businesscard/vcards/{id}", server.DeleteVcard).Methods("DELETE")
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
 
-	http.HandleFunc("/api/businesscard/vcards", server.VcardsHandler)
+/*	http.HandleFunc("/api/businesscard/vcards", server.VcardsHandler)
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
-
+}*/

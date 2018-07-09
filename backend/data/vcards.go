@@ -7,7 +7,7 @@ import (
 //Vcard структура для хранения визитных карточек
 type Vcard struct {
 	Name      string `json:"name"`
-	Position  string `json:"posion"`
+	Position  string `json:"position"`
 	Phone     string `json:"phone"`
 	Email     string `json:"email"`
 	Workplace string `json:"workplace"`

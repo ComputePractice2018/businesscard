@@ -91,7 +91,7 @@ docker run --rm --name businesscardbackend -e NAME=<параметр прило�
 Frontend:
 
 ```bat
-cd backend
+cd frontend
 docker build -f Dockerfile -t businesscardfrontend:<имя ветки> .
 docker run  -d --rm --name businesscardfrontend -p 80:80 businesscardfrontend:<имя ветки>
 ```
