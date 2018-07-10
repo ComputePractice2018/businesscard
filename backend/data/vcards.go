@@ -14,35 +14,50 @@ type Vcard struct {
 	Address   string `json:"address"`
 }
 
-// vcards хранит список визитных карточек
-var vcards []Vcard
+// VcardList структура для списка записей визиток
+type VcardList struct {
+	vcards []Vcard
+}
+
+//Editable интерфейс для работы со списком записей
+type Editable interface {
+	GetVcards() []Vcard
+	AddVcard(vcard Vcard) int
+	EditVcard(vcard Vcard, id int) error
+	RemoveVcard(id int) error
+}
+
+// NewVcardList конструктор списка визиток
+func NewVcardList() *VcardList {
+	return &VcardList{}
+}
 
 //GetVcards возвращает список визитных карточек
-func GetVcards() []Vcard {
-	return vcards
+func (vl *VcardList) GetVcards() []Vcard {
+	return vl.vcards
 }
 
 //AddVcard добавляет карточку vcard в конец списка и возвращает id
-func AddVcard(vcard Vcard) int {
-	id := len(vcards)
-	vcards = append(vcards, vcard)
+func (vl *VcardList) AddVcard(vcard Vcard) int {
+	id := len(vl.vcards)
+	vl.vcards = append(vl.vcards, vcard)
 	return id
 }
 
 //EditVcard изменяет карточку c id на vcard
-func EditVcard(vcard Vcard, id int) error {
-	if id < 0 || id >= len(vcards) {
+func (vl *VcardList) EditVcard(vcard Vcard, id int) error {
+	if id < 0 || id >= len(vl.vcards) {
 		return fmt.Errorf("incorrect ID")
 	}
-	vcards[id] = vcard
+	vl.vcards[id] = vcard
 	return nil
 }
 
 //RemoveVcard удаляет контакт по id
-func RemoveVcard(id int) error {
-	if id < 0 || id >= len(vcards) {
+func (vl *VcardList) RemoveVcard(id int) error {
+	if id < 0 || id >= len(vl.vcards) {
 		return fmt.Errorf("incorrect ID")
 	}
-	vcards = append(vcards[:id], vcards[id+1:]...)
+	vl.vcards = append(vl.vcards[:id], vl.vcards[id+1:]...)
 	return nil
 }
