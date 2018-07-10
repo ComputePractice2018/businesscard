@@ -4,6 +4,7 @@ import "testing"
 
 var testVcards = []Vcard{
 	{
+		ID:        1,
 		Name:      "Evgeny",
 		Position:  "Zavedooushy Laboratory",
 		Phone:     "+79998888899",
@@ -12,6 +13,7 @@ var testVcards = []Vcard{
 		Address:   "Central street",
 	},
 	{
+		ID:        2,
 		Name:      "Vasya",
 		Position:  "Dvornik",
 		Phone:     "+79997778899",
@@ -27,7 +29,7 @@ func TestAddVcard(t *testing.T) {
 	vl.AddVcard(testVcards[0])
 
 	if vl.GetVcards()[0] != testVcards[0] {
-		t.Errorf("AddVcard is no working")
+		t.Errorf("AddVcard is not working")
 	}
 }
 
@@ -35,13 +37,13 @@ func TestEditVcard(t *testing.T) {
 	vl := NewVcardList()
 	vl.AddVcard(testVcards[0])
 
-	err := vl.EditVcard(testVcards[1], 0)
+	err := vl.EditVcard(testVcards[1], 1)
 
 	if vl.GetVcards()[0] != testVcards[1] {
 		t.Errorf("EditVcard is no working")
 	}
 	if err != nil {
-		t.Errorf("Unexpected EditVcard error")
+		t.Errorf("Unexpected EditVcard error: %+v", err)
 	}
 
 	err = vl.EditVcard(testVcards[1], -1)
@@ -56,7 +58,7 @@ func TestRemoveVcard(t *testing.T) {
 	vl.AddVcard(testVcards[0])
 	vl.AddVcard(testVcards[1])
 
-	err := vl.RemoveVcard(0)
+	err := vl.RemoveVcard(1)
 
 	if vl.GetVcards()[0] != testVcards[1] {
 		t.Errorf("RemoveVcard is no working")

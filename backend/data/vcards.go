@@ -6,6 +6,7 @@ import (
 
 //Vcard структура для хранения визитных карточек
 type Vcard struct {
+	ID        int    `json:"id"`
 	Name      string `json:"name"`
 	Position  string `json:"position"`
 	Phone     string `json:"phone"`
@@ -39,25 +40,27 @@ func (vl *VcardList) GetVcards() []Vcard {
 
 //AddVcard добавляет карточку vcard в конец списка и возвращает id
 func (vl *VcardList) AddVcard(vcard Vcard) int {
-	id := len(vl.vcards)
+	id := len(vl.vcards) + 1
+	vcard.ID = id
 	vl.vcards = append(vl.vcards, vcard)
 	return id
 }
 
 //EditVcard изменяет карточку c id на vcard
 func (vl *VcardList) EditVcard(vcard Vcard, id int) error {
-	if id < 0 || id >= len(vl.vcards) {
+	if id < 1 || id > len(vl.vcards) {
 		return fmt.Errorf("incorrect ID")
 	}
-	vl.vcards[id] = vcard
+	vl.vcards[id-1] = vcard
 	return nil
 }
 
 //RemoveVcard удаляет контакт по id
 func (vl *VcardList) RemoveVcard(id int) error {
-	if id < 0 || id >= len(vl.vcards) {
+	if id < 1 || id > len(vl.vcards) {
 		return fmt.Errorf("incorrect ID")
 	}
+	id--
 	vl.vcards = append(vl.vcards[:id], vl.vcards[id+1:]...)
 	return nil
 }
