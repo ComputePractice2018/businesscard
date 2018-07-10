@@ -1,0 +1,212 @@
+.head {
+    border-color: #fd8aa5 !important;
+  }
+  h1 {
+    margin: 1em 0 0.5em 0;
+    color: #38000d;
+    font-weight: 900;
+    font-family: 'Arial black';
+    font-size: 46px;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-shadow: 0 2px #ffc0cf, 0 3px #ad5569;
+    text-align: center;
+  }
+  h2 {
+    margin: 1em 0 0.5em 0;
+    color: #38000d;
+    font-weight: 700;
+    font-family: 'Arial black';
+    font-size: 24px !important;
+    text-align: center;
+  }
+  .btn.btn-primary {
+    color: #38000d;
+    background-color: #aee0f0;
+    border-color: #84bccf;
+    font-size: 18px;
+  }
+  .btn.btn-primary.focus,
+  .btn.btn-primary:focus {
+    color: #38000d;
+    background-color: #aee0f0;
+    border-color: #84bccf;
+    outline: none;
+    box-shadow: none;
+  }
+  .btn.btn-primary:hover {
+    color: #fff;
+    background-color: #346383;
+    border-color: #274f69;
+    outline: none;
+    box-shadow: none;
+  }
+  .newVcard {
+    background-color: #ffeff2 !important;
+    margin: auto;
+    font-size: 19px !important;
+    box-shadow: 0 0 5px 2px;
+    width: 630px;
+  }
+  .formLabel {
+    color: #38000d !important;
+    font-weight: 600;
+    font-family:'Times New Roman', Times, serif !important;
+    font-size: 22px;
+  }
+  .h3Form {
+    color: #38000d !important;
+    font-weight: 800;
+    font-size: 28px;
+    text-align: center;
+    background-color: #ff9eb5;
+    height: 60px !important;
+    line-height: 60px !important;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 4px;
+  }
+  .h3Search{
+    color: #38000d !important;
+    width: 430px;
+    margin: auto;
+    font-weight: 800;
+    font-size: 28px;
+    text-align: center;
+    background-color: #ff9eb5;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 4px;
+  }
+  .form-control {
+    width: 590px;
+    font-size: 20px !important;;
+  }
+  .form-control:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #ff9eb5 !important;
+    border-color: #fd8aa5 !important;;
+    color: #000 !important;;
+  }
+  .form-control1 {
+    width: 430px !important;
+    font-size: 20px !important;
+    margin: auto;
+  }
+  .form-control1:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #ff9eb5 !important;
+    border-color: #fd8aa5 !important;;
+    color: #000 !important;;
+  }
+  .class1 {
+  height: 20%;
+  }
+  .class2 {
+    min-height: 100%;
+  }
+  .vcard {
+    cursor: default;
+    box-shadow: 0 0 5px 2px;
+    background-color: #ff9eb5;
+    width: 430px;
+    height: 200px;
+    font-family: 'Arial black';
+    font-size: 18px;
+    color: #38000d;
+    text-align: center;
+    margin: auto;
+  }
+  .vcard:hover {
+    background-color: #ffeff2;
+    width: 490px;
+    height: 240px;
+    font-size: 22px !important;
+  }
+  .vcard:hover > h2 {
+    font-size: 30px !important;
+  }
+  .vcard:hover > div.left {
+    background-color: #ffeff2;
+    font-size: 20px;
+    width: 240px;
+    margin-left: 4px;
+  }
+  .vcard:hover > div.right {
+    background-color: #ffeff2;
+    font-size: 20px;
+    width: 240px;
+    text-align: right;
+  }
+  .vcard:hover > div.place {
+    background-color: #ffeff2;
+    font-size: 22px;
+  }
+  .left {
+    background-color: #ff9eb5;
+    width: 207px;
+    float: left;
+    text-align: left;
+    margin-left: 3px;
+    color: #38000d;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+  }
+  .right {
+    background-color: #ff9eb5;
+    width: 217px;
+    float: left;
+    text-align: right;
+    margin-right: 3px;
+    color: #38000d;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+  }
+  .place {
+    background-color: #ff9eb5;
+    margin: 1em 0 0.5em 0;
+    color: #38000d;
+    font-weight: 700;
+    height: 30px;
+    line-height: 40px;
+    font-family: 'Arial black';
+    font-size: 18px;
+  }
+  hr.hr1 {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    color: #6b0019;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+  }
+  hr {
+    display: block;
+    color: #6b0019;
+    height: 30px;
+    margin-top: -20px;
+    height: 30px;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    width: 98%;
+  }
+  .buttons {
+    width: 430px;
+    margin: auto;
+    height: 25px;
+  }
+  .left1 {
+    width: 207px;
+    float: left;
+    text-align: left;
+    margin-left: 3px;
+  }
+  .right1 {
+    width: 217px;
+    float: left;
+    text-align: right;
+    margin-right: 3px;
+  }
+  .searchWarning {
+    color: rgb(175, 6, 6);
+    font-family: 'Segoe Script';
+    text-align: center;
+  }
