@@ -43,7 +43,7 @@ func TestCrudHandlers(t *testing.T) {
 		t.Errorf("Expected 201 code (gotten: %d)", resp.StatusCode)
 	}
 
-	if resp.Header.Get("Location") != "/api/businesscard/vcards/0" {
+	if resp.Header.Get("Location") != "/api/businesscard/vcards/1" {
 		t.Error("Expected another location")
 	}
 
@@ -51,7 +51,7 @@ func TestCrudHandlers(t *testing.T) {
 		t.Error("Expected new value")
 	}
 	testData = strings.NewReader(testVcard)
-	req, err = http.NewRequest("PUT", "/api/businesscard/vcards/0", testData)
+	req, err = http.NewRequest("PUT", "/api/businesscard/vcards/1", testData)
 
 	w = httptest.NewRecorder()
 	router.ServeHTTP(w, req)
@@ -61,7 +61,7 @@ func TestCrudHandlers(t *testing.T) {
 		t.Errorf("Expected 201 code (gotten: %d)", resp.StatusCode)
 	}
 
-	if resp.Header.Get("Location") != "/api/businesscard/vcards/0" {
+	if resp.Header.Get("Location") != "/api/businesscard/vcards/1" {
 		t.Error("Expected another location")
 	}
 
@@ -69,8 +69,7 @@ func TestCrudHandlers(t *testing.T) {
 		t.Error("Expected old value")
 	}
 
-	//testData = strings.NewReader(testVcard)
-	req, err = http.NewRequest("DELETE", "/api/businesscard/vcards/0", nil)
+	req, err = http.NewRequest("DELETE", "/api/businesscard/vcards/1", nil)
 
 	w = httptest.NewRecorder()
 	router.ServeHTTP(w, req)
