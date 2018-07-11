@@ -46,7 +46,7 @@ func (vl *DBVcardList) EditVcard(vcard Vcard, id int) error {
 	return vl.db.Error
 }
 
-func (vl *DBVcardList) RemoveContact(id int) error {
+func (vl *DBVcardList) RemoveVcard(id int) error {
 	var vcards []Vcard
 	vl.db.Where("id = ?", id).Find(&vcards)
 	if len(vcards) == 0 {
