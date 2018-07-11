@@ -16,7 +16,7 @@ import (
 func GetVcards(vl data.Editable) func(w http.ResponseWriter, r *http.Request) {
 
 	return func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Add("Content-Type", "plain/text; charset=utf-8")
+		w.Header().Add("Content-Type", "application/json; charset=utf-8")
 		w.WriteHeader(http.StatusOK)
 		err := json.NewEncoder(w).Encode(vl.GetVcards())
 		if err != nil {

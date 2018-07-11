@@ -69,7 +69,7 @@ func TestCrudHandlers(t *testing.T) {
 		t.Error("Expected old value")
 	}
 
-	testData = strings.NewReader(testVcard)
+	//testData = strings.NewReader(testVcard)
 	req, err = http.NewRequest("DELETE", "/api/businesscard/vcards/0", nil)
 
 	w = httptest.NewRecorder()
