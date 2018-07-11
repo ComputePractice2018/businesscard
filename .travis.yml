@@ -8,9 +8,7 @@ matrix:
         - go get github.com/gorilla/mux
       script:
         - cd data
-        - go test -v
         - cd ../server
-        - go test -v
 
     - language: node_js
       node_js:
@@ -19,5 +17,4 @@ matrix:
         - cd frontend
         - npm install
       script:
-        - npm run test:unit
         - npm run lint
