@@ -12,7 +12,7 @@ import (
 
 func main() {
 
-	connection := flag.String("connection", "businesscard:SuperSecretPassword@tcp(db:3306)/addressbook", "mysql connection string")
+	connection := flag.String("connection", "businesscard:SuperSecretPassword@tcp(db:3306)/businesscard", "mysql connection string")
 	flag.Parse()
 
 	vcardList, err := data.NewDBVcardList(*connection)

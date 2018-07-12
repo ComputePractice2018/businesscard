@@ -16,7 +16,7 @@
     <input type="text" placeholder="Чтобы найти визитку, введите ФИО" v-model="search" class="form-control"
     style="margin: auto; margin-top: 10px"/></div>
     <div>
-      <div v-for="vcard in filteredVcards" v-bind:key="vcard.phone">
+      <div v-for="vcard in filteredVcards" v-bind:key="vcard.id">
         <div class="vcard">
           <div class="place">{{vcard.workplace}}</div><hr class="hr1">
           <h2>{{vcard.name}}</h2>
