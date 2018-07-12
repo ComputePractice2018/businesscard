@@ -8,6 +8,8 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     restart: always
+    environment:
+      CONNECTION: businesscard:SuperSecretPassword@tcp(db:3306)/businesscard
 
   frontend:
     build:
